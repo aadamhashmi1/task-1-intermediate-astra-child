@@ -2,12 +2,16 @@
 /**
  * The header for Astra Theme.
  *
+ * This is the template that displays all of the <head> section and everything up until <div id="content">
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
  * @package Astra
  * @since 1.0.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
-    exit;
+	exit; // Exit if accessed directly.
 }
 
 ?><!DOCTYPE html>
@@ -19,9 +23,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <?php
 if ( apply_filters( 'astra_header_profile_gmpg_link', true ) ) {
-    ?>
-    <link rel="profile" href="https://gmpg.org/xfn/11"> 
-    <?php
+	?>
+	<link rel="profile" href="https://gmpg.org/xfn/11"> 
+	<?php
 }
 ?>
 <?php wp_head(); ?>
@@ -32,31 +36,45 @@ if ( apply_filters( 'astra_header_profile_gmpg_link', true ) ) {
 <?php astra_body_top(); ?>
 <?php wp_body_open(); ?>
 
-<a class="skip-link screen-reader-text" href="#content" title="<?php echo esc_attr( astra_default_strings( 'string-header-skip-link', false ) ); ?>">
-    <?php echo esc_html( astra_default_strings( 'string-header-skip-link', false ) ); ?>
+<a
+	class="skip-link screen-reader-text"
+	href="#content"
+	title="<?php echo esc_attr( astra_default_strings( 'string-header-skip-link', false ) ); ?>">
+		<?php echo esc_html( astra_default_strings( 'string-header-skip-link', false ) ); ?>
 </a>
 
-<div <?php echo wp_kses_post( astra_attr( 'site', [ 'id' => 'page', 'class' => 'hfeed site' ] ) ); ?>>
-    
-    <?php astra_header_before(); ?>
+<div
+<?php
+	echo wp_kses_post(
+		astra_attr(
+			'site',
+			array(
+				'id'    => 'page',
+				'class' => 'hfeed site',
+			)
+		)
+	);
+	?>
+>
+	<?php
+astra_header_before();
+?>
 
-    <!-- ✅ Custom Logo + Secondary Menu -->
-    <div class="custom-header-elements" style="text-align:center; padding:20px;">
-        <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/logo.png" alt="Custom Logo" width="120">
-        </a>
-        <nav class="secondary-navigation">
-            <?php wp_nav_menu( [ 'theme_location' => 'secondary', 'menu_class' => 'secondary-menu' ] ); ?>
-        </nav>
-    </div>
-    <!-- ✅ End Custom Elements -->
+<!-- ✅ HTML outside PHP block -->
+<div class="custom-logo">
+  <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png" alt="My Logo">
+</div>
 
-    <?php astra_header(); ?>
+<nav class="secondary-menu">
+  <?php wp_nav_menu( array( 'theme_location' => 'secondary' ) ); ?>
+</nav>
 
-    <?php astra_header_after(); ?>
+<?php
+astra_header();
+astra_header_after();
+astra_content_before();
+?>
 
-    <?php astra_content_before(); ?>
-    
-    <div id="content" class="site-content">
-        <div class="ast-container">
-            <?php astra_content_top(); ?>
+	<div id="content" class="site-content">
+		<div class="ast-container">
+		<?php astra_content_top(); ?>
