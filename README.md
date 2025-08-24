@@ -1,23 +1,17 @@
-# Astra Child Task 1
+# Custom Blog Page Template
 
-## Parent Theme
-Astra
+## 🎯 Purpose
+This template displays blog posts in a responsive grid layout with featured images, titles, excerpts, and "Read More" buttons.
 
-## Setup Instructions
-1. Upload `astra-child-task-1` to `wp-content/themes`
-2. Activate via WordPress Admin
-3. Ensure Astra is installed and active
+## 🛠 Setup
+1. Upload `astra-child-task-1` to `/wp-content/themes/`
+2. Activate the child theme
+3. Create a page and assign the "Blog Page" template
 
-## Modifications
-- Custom logo and secondary menu in header
-- Social links and copyright in footer
-- Featured image and meta info in single post
+## 📸 Preview
+- Screenshot: `/assets/screenshots/blog-template.png`
 
-## Screenshots
-Include screenshots of:
-- Header
-- Footer
-- Single post
-
-## Bonus
-- (Optional) Add sidebar or dynamic widgets
+## 💡 Features
+- Responsive grid layout
+- Dynamic post loading via WP_Query
+- Clean design with hover effects
