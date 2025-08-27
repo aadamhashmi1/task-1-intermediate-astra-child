@@ -122,3 +122,20 @@ Version: 1.0
 .read-more:hover {
   text-decoration: underline;
 }
+.portfolio-single {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.portfolio-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.portfolio-thumbnail {
+  max-width: 100%;
+  height: auto;
+  margin: 20px 0;
+  border-radius: 8px;
+}
