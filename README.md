@@ -1,21 +1,23 @@
-# Custom Post Types: Portfolio, Testimonials, Products
+# Portfolio Custom Fields with ACF
 
 ## 🔧 Setup
-1. Upload `astra-child-task-1` to `/wp-content/themes/`
-2. Activate the child theme
-3. CPTs will appear in the WordPress dashboard
+1. Install and activate Advanced Custom Fields plugin
+2. Create field group: "Portfolio Details"
+3. Assign to Portfolio post type
 
-## 🧪 CPTs Registered
-- **Portfolio**: Title, editor, featured image, excerpt
-- **Testimonials**: Title, editor, featured image
-- **Products**: Title, editor, featured image, categories, custom fields
+## 🧪 Fields Created
+- Project Name (Text)
+- Project Description (Textarea)
+- Project Thumbnail (Image)
+- Project Link (URL)
 
-## 🖼 Screenshots
-- Dashboard showing CPTs
-- Add New screen for each CPT
-- Sample item preview
+## 🖥 Templates Modified
+- `single-portfolio.php` in child theme
+
+## 📸 Screenshots
+- ACF field group setup
+- Portfolio post with custom fields displayed
 
 ## 💡 Bonus
-- Portfolio Categories and Product Brands taxonomies
-- Archive template: `archive-portfolio.php`
-- Shortcode: `[testimonial_slider]` (optional)
+- Repeater field for multiple images
+- Conditional display logic
